@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Untitled Document</title>
+	<link rel="stylesheet" type="text/css" href="off_canvas_only_nav.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+
+	<header>
+		<!-- Use any element to open the sidenav, this could be a hamburger symbol or anything else -->
+		<span onclick="openNav()">Open</span>
+	</header>
+	<!-- this is the hidden side menu -->
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="#">About</a>
+		<a href="#">Services</a>
+		<a href="#">Clients</a>
+		<a href="#">Contact</a>
+	</div>
+
+	<!-- Add all page content inside this div if you want the side nav to push page content to the left (not used if you only want the sidenav to sit on top of the page -->
+	<div id="push_left">
+		<main>
+			<!-- this div controls the width of the main area -->
+			<div id="container">
+				<h1>Some random content here</h1>
+				<p>
+					Cras pulvinar mattis nisi, ut lacinia lacus volutpat sit amet. Duis id blandit velit. Mauris diam dolor, semper ac viverra ac, egestas eu tellus. Nunc imperdiet tincidunt neque. Nullam quis risus id augue porttitor porta ac ac dui. Morbi scelerisque tincidunt mauris vel pulvinar. Integer at ligula a nibh ornare scelerisque non sed ante. Vivamus dictum, ante sit amet feugiat vulputate, mauris odio varius purus, vel porttitor ipsum massa vel nunc. Cras posuere placerat condimentum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris convallis dolor at viverra pulvinar. Nullam sed ex feugiat justo tempus laoreet. Etiam bibendum felis nisi, ac tincidunt justo dictum at.
+				</p>
+				<p>
+					Suspendisse in mattis metus. Donec sit amet elit ullamcorper ante lacinia convallis. Curabitur non neque augue. Morbi rutrum eu velit sit amet hendrerit. Sed augue ipsum, venenatis sed egestas in, auctor non purus. Ut semper orci libero, in consectetur ex rhoncus eu. Nunc sed cursus nisl.
+				</p>
+				<p>
+					Etiam aliquet at mi sed lobortis. Nam molestie hendrerit accumsan. Sed et urna id lectus vulputate gravida. Integer bibendum a risus et volutpat. In hac habitasse platea dictumst. Fusce porttitor, libero tincidunt dapibus faucibus, nibh ligula viverra ante, at pretium metus ex iaculis felis. Praesent varius lorem lacus, nec pharetra metus faucibus eget. Integer at est nec risus ornare fermentum in sit amet elit. Vivamus quis urna non elit mollis ornare nec a lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce in diam dictum, malesuada mi nec, condimentum justo.
+				</p>
+			</div> <!-- closes the container div -->
+		</main>
+		<footer>
+			<p>Copyright &copy;
+				<script>
+					document.write(new Date().getFullYear());
+
+				</script> <br> websitenamehere.com
+			</p>
+		</footer>
+	</div> <!-- closes the push left div -->
+	<script>
+		/* Set the width of the side navigation to 320px and the right margin of the page content to 200px and adds a black background color to body */
+		function openNav() {
+			document.getElementById("mySidenav").style.width = "320px";
+			document.getElementById("push_left").style.marginRight = "200px";
+			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+
+		/* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("push_left").style.marginRight = "0";
+			document.body.style.backgroundColor = "white";
+		}
+
+	</script>
+</body>
+
+</html>
